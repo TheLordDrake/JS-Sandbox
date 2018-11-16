@@ -1,0 +1,1 @@
+window.onload = console.log('Hello from Console land!')
