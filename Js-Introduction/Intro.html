@@ -6,14 +6,52 @@
     <div id="demo">
 
     </div>
+    <div id='single'>
+
+    </div>
+    <div>
+        <button id='red' >Red</button>
+        <img id='sampleImg' src='blue.jpg' />
+
+        <!-- Inline onlick -->
+        <button id='blue' onclick="document.getElementById('sampleImg').src = 'blue.jpg'" >Blue</button>
+    </div>
+
+    <br />
+
+    <div id='hidden'>
+        Now you see me!
+        <br />
+        <button id='hide'>Hide</button>
+    </div>
+
+    <br />
+
+    <div>
+        <!-- In Js you have to alternate quotes -->
+        <button onclick="document.getElementById('hidden').style.display = 'block';">Show hidden text</button>
+    </div>
 </body>
 
+<br />
+
 <footer>
-    W3C Tutorial:
-    <br />
-    https://www.w3schools.com/js/js_intro.asp
+    <a href='https://www.w3schools.com/js/js_intro.asp'>w3schools</a>
 </footer>
 
 <script>
+    // Anything in here runs on page load
     document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    document.getElementById('single').innerHTML = 'Single quotes work fine!';
+
+    // Seperate onlick
+    document.getElementById('red').onclick = function()
+    {
+        document.getElementById('sampleImg').src = 'red.jpg'
+    }
+
+    document.getElementById('hide').onclick = function()
+    {
+        document.getElementById('hidden').style.display = 'none';
+    }
 </script>
