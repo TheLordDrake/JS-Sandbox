@@ -1,0 +1,16 @@
+<!doctype html> <!-- Case insensitive in raw html -->
+<html>
+    <body>
+        <h1>A Web Page</h1>
+        <p id='demo'>A paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+
+        <!-- Placing scripts at the bottom of the <body> element improves the display speed, because script compilation slows down the display. Per W3C.-->
+        <script>
+            function myFunction()
+            {
+                document.getElementById('demo').innerHTML = 'Paragraph changed';
+            }
+        </script>
+    </body>
+</html>
